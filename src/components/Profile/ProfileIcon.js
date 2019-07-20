@@ -6,6 +6,10 @@ import {
   DropdownItem,
 } from "reactstrap";
 
+// TODO when signing out we should also:
+// 1. Delete token from local storage
+// 2. Delete token from redis
+
 class ProfileIcon extends React.Component {
   constructor(props) {
     super(props);
