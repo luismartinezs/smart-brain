@@ -139,8 +139,10 @@ class App extends Component {
         {isProfileOpen && (
           <Modal>
             <Profile
+              user={this.state.user}
               isProfileOpen={isProfileOpen}
               toggleModal={this.toggleModal}
+              loadUser={this.loadUser}
             />
           </Modal>
         )}
