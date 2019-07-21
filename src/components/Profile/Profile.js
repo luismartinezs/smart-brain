@@ -8,7 +8,7 @@ class Profile extends React.Component {
       // Good practice with form: have a state in the form, only when the user submits update the app state, this is to avoid unnecessary re-rendering when user changes input
       name: this.props.user.name,
       age: this.props.user.age,
-      pet: this.props.user.pet,
+      pet: this.props.user.pet
     };
   }
 
@@ -16,17 +16,17 @@ class Profile extends React.Component {
     switch (event.target.name) {
       case "user-name":
         this.setState({
-          name: event.target.value,
+          name: event.target.value
         });
         break;
       case "user-age":
         this.setState({
-          age: event.target.value,
+          age: event.target.value
         });
         break;
       case "user-pet":
         this.setState({
-          pet: event.target.value,
+          pet: event.target.value
         });
         break;
       default:
@@ -39,11 +39,11 @@ class Profile extends React.Component {
       method: "post",
       headers: {
         "Content-type": "application/json",
-        Authorization: window.sessionStorage.getItem("token"),
+        Authorization: window.sessionStorage.getItem("token")
       },
       body: JSON.stringify({
-        formInput: data,
-      }),
+        formInput: data
+      })
     })
       .then(resp => {
         if (resp.status === 200 || resp.status === 304) {
@@ -87,7 +87,7 @@ class Profile extends React.Component {
             <input
               className="pa2 ba w-100"
               placeholder={user.age}
-              type="text"
+              type="number"
               name="user-age"
               id="age"
               onChange={this.onFormChange}
