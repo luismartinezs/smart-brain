@@ -1,6 +1,6 @@
 # Tasks
 
-Task 1: Add pet and age column to the database and allow users to update these fields on their profile.
+Task 1: Add pet and age column to the database and allow users to update these fields on their profile. DONE
 
 Task 2: Implement token flow as we have done so far for /register end point as well.
 
